@@ -1,0 +1,11 @@
+AC_INIT([scardcontrol], [0.1.0])
+AM_INIT_AUTOMAKE
+
+PKG_CHECK_MODULES(PCSC, libpcsclite >= 0.26)
+AC_SUBST(PCSC_CFLAGS)
+AC_SUBST(PCSC_LIBS)
+
+AC_PROG_CC
+
+AC_OUTPUT(Makefile)
+
